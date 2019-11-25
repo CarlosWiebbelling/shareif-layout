@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf8">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../js/main.js"></script>
+    <title>Shareif</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Chewy&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div name="bloco_ferramentas" id="bloco_ferramentas">
+        <img class="img_logo" src="../imgs/chapeu.png" alt="logo">
+
+        <!-- Open modal to add new Chat -->
+        <button type="button" class="button" data-toggle="modal" data-target="#addNewChat">
+            Add Chat
+        </button>
+
+        <a href="creategroup.html">
+            <button class="button" name="criar" id="criar">Create Chat</button>
+        </a>
+        <a href="options.html">
+            <button class="button" name="opcoes" id="opcoes">Options</button>
+        </a>
+    </div>
+
+    <!-- DESENVOLVER GERADOR DE DIVS QUE SERÁ RECEBIDO VIA JS -->
+    <div name="bloco_chats" id="bloco_chats">
+    </div>
+
+    <div class="row">
+        <div class="col-3 col-md-3 col-xl-2">
+            <div class="labelChat">
+                <h5 style="text-align: center;">Aqui você pode ver todos os seus chats!</h5>
+            </div>
+            <div id="chats"></div>
+            <!-- Chats of the user -->
+        </div>
+        <div>
+            <div name="bloco_chat" id="bloco_chat" class="col-9 col-md-9 col-xl-10">
+
+                <div class="card">
+                    <div class="card-header">
+                        <!-- Tabs of each chat -->
+                        <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
+                        </ul>
+                    </div>
+
+                    <div class="card-body">
+                        <!-- Content of each tab content -->
+                        <div class="tab-content mt-3" id="chatsContent">
+                        </div>
+                    </div>
+
+                    
+                    <div name="bloco_texto" id="bloco_texto">
+                        <input name="mensagem" id="mensagem" type="text" placeholder="Digite sua mensagem" class="col-10"onKeyPress="enviar_enter()">
+                        <button class="button" name="enviar" id="enviar" type="submit" onclick="enviar();"
+                            class="col-2">Enviar</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addNewChat" tabindex="-1" role="dialog" aria-labelledby="addNewChatTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div name="bloco_texto" id="bloco_texto">
+                        <input name="novo_chat" id="novo_chat" type="text"
+                            placeholder="Digite a public key do chat">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="adicionar_chat()">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $('#bologna-list a').on('click', function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+    </script>
+</body>
+
+</html>
