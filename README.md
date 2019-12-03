@@ -1,10 +1,8 @@
-[--------------------------Code--------------------------]
-				.
-    |		|		|		
-    ' 	        ' 	
-1º vez	     2º diante	      salvar
-git clone    git pull	    alterações*
+1º vez
+git clone
 
+2º diante
+git pull
 
 
 1* git add .
