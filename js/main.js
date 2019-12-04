@@ -34,6 +34,8 @@ function recebeNome(parameter) {
     }
 
     if (param_value) {
+        // Send request to generate key pair
+        sendCreatePair(Date.now())
         return param_value;
     } else {
         return undefined;
@@ -54,12 +56,16 @@ function enviar_enter() {
 
 // FUNÇÃO PARA ENVIAR A MENSAGEM NO CHAT.
 function enviar() {
+    if (chatOpen === undefined) return
     if (document.getElementById('mensagem').value == "") return
+
+    const chatAlreadyOpen = chats.filter(key => key.publicKey === chatOpen )
+    console.log(chatAlreadyOpen)
+
+    
 
     let msg = document.getElementById('mensagem').value;
     let chat = document.getElementById(`Content${chatOpen}`);
-
-    let x = document.getElementById('bloco_mensagens');
 
     // cria um elemento "div" que suportará a mensagem.
     let div = document.createElement('div');
