@@ -26,6 +26,11 @@ body{
  #bloco_texto{
      padding: 10px;
  }
+
+ #chatsContent {
+    height: 400px;
+    overflow: auto;
+ }
  
  input{
      width: 100%
