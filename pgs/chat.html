@@ -4,7 +4,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="../js/main.js"></script>
     <title>Shareif</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
@@ -33,7 +32,6 @@
         </a>
     </div>
 
-    <!-- DESENVOLVER GERADOR DE DIVS QUE SERÁ RECEBIDO VIA JS -->
     <div name="bloco_chats" id="bloco_chats">
     </div>
 
@@ -50,6 +48,7 @@
 
                 <div class="card">
                     <div class="card-header">
+
                         <!-- Tabs of each chat -->
                         <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
                         </ul>
@@ -61,9 +60,10 @@
                         </div>
                     </div>
 
-                    
+
                     <div name="bloco_texto" id="bloco_texto">
-                        <input name="mensagem" id="mensagem" type="text" placeholder="Digite sua mensagem" class="col-10"onKeyPress="enviar_enter()">
+                        <input name="mensagem" id="mensagem" type="text" placeholder="Digite sua mensagem"
+                            class="col-10" onKeyPress="enviar_enter()">
                         <button class="button" name="enviar" id="enviar" type="submit" onclick="enviar();"
                             class="col-2">Enviar</button>
                     </div>
@@ -87,8 +87,8 @@
                 </div>
                 <div class="modal-body">
                     <div name="bloco_texto" id="bloco_texto">
-                        <input name="novo_chat" id="novo_chat" type="text"
-                            placeholder="Digite a public key do chat">
+                        <input name="public_key_chat" id="public_key_chat" type="text" placeholder="Digite a public key do chat">
+                        <input name="private_key_chat" id="private_key_chat" type="text" placeholder="Digite a private key do chat">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -99,12 +99,17 @@
         </div>
     </div>
 
+    <script src="../js/socket.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
+        
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
