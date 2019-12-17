@@ -1,0 +1,95 @@
+ body{
+    margin: 0;
+    font-family: 'Chewy', cursive;
+    min-width: 900px;
+    background-color: rgb(255, 246, 234);
+ }
+
+ .background{
+    background-image: url("../imgs/background.jpg");
+    filter: brightness(50%);
+    position: fixed;
+    background-repeat: no-repeat; 
+    width: 100%;
+    height: 100%;
+ }
+
+ .bloco_login {
+    width: 600px;
+    height: 300px; 
+    position: absolute;
+    top: 30%;
+    left: 28%;
+ }
+
+.chave{
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow: 1px 1px 2px;
+}
+ 
+ #bloco_ferramentas{
+    padding: 10px;  
+ }
+ 
+ .img_logo{
+    width: 80px;
+ }
+ 
+ #bloco_mensagens{
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 250px;
+    margin: 10px;
+    padding: 10px;
+ }
+ 
+ #bloco_texto{
+    padding: 10px;
+ }
+
+ #chatsContent {
+    height: 400px;
+    overflow: auto;
+ }
+ 
+ input{
+    width: 100%
+ }
+ 
+ input.usuario{
+    width: 200px;
+ }
+ 
+ /* CLASS button */
+ .button{
+    background-color: rgb(143, 142, 142);
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: 'Chewy', cursive;
+ }
+ 
+ /* Chat of the user */
+ .labelChat {
+    width: 100%; 
+    height: 70px; 
+    background-color: rgb(147, 147, 218);
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 5px;
+ }
+ 
+ /* Card */
+ .card {
+    min-width: 850px;
+ }
+
+ .active {
+    background-color: rgb(122, 122, 236);
+ }
+
+ .active a {
+    color: white;
+ }
