@@ -1,3 +1,4 @@
+
 var nome = recebeNome("nome");
 let chatOpen = undefined
 
@@ -6,6 +7,7 @@ const chats = []
 // FUNÇÃO DE LOGIN VIA TECLA ENTER.
 function login_enter() {
     const inputEle = document.getElementById('chave');
+
     inputEle.addEventListener('keyup', function (e) {
         let key = e.which || e.keyCode;
         if (key == 13) {
@@ -59,7 +61,7 @@ function enviar() {
     if (chatOpen === undefined) return
     if (document.getElementById('mensagem').value == "") return
 
-    const chatAlreadyOpen = chats.filter(key => key.publicKey === chatOpen )
+    const chatAlreadyOpen = chats.filter(key => key.publicKey === chatOpen)
     console.log(chatAlreadyOpen)
 
     let msg = document.getElementById('mensagem').value;
@@ -132,9 +134,9 @@ function adicionar_chat() {
     console.log(chats)
 
     chats.push(
-        { 
-            'publicKey': publicKey, 
-            'privateKey': privateKey 
+        {
+            'publicKey': publicKey,
+            'privateKey': privateKey
         }
     )
 
