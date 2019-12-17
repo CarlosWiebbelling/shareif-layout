@@ -8,18 +8,19 @@
     <title>Shareif</title>
 </head>
 
-<body >
-    
-    <div class="bloco_logotipo" name="bloco_logotipo" id="bloco_logotipo">
-        <img class="logotipo" src="imgs/logo.png" alt="logo">
+<body >    
+    <div class="background">
+        <div class="bloco_login">
+            <div class="bloco_logotipo">
+                <img class="logotipo" src="imgs/logo.png" alt="logo">
+            </div>
+            <div name="bloco_formulario" id="bloco_formulario">
+                <label class="key">Key: </label>
+                <input class="chave" name="chave" id="chave" type="text" placeholder="Digite sua chave" onkeypress="login_enter()"><br><br>
+                <button class="button" name="login" id="login" type="submit" onclick="login();">Login</button>     
+            </div>
+        </div>
     </div>
-
-    <div name="bloco_acesso" id="bloco_acesso">
-    	<label class="key" name="key" id="key">Key: </label>
-        <input class="chave" name="chave" id="chave" type="text" placeholder="Digite sua chave" onkeypress="login_enter()"><br><br>
-        <button class="button" name="login" id="login" type="submit" onclick="login();">Login</button>     
-    </div>
-
 <script type="text/javascript" src="js/main.js">
 
 </script>
