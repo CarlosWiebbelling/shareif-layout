@@ -35,7 +35,7 @@ function recebeNome(parameter) {
 
     if (param_value) {
         // Send request to generate key pair
-        sendCreatePair(Date.now())
+        // sendCreatePair(Date.now())
         return param_value;
     } else {
         return undefined;
@@ -62,8 +62,6 @@ function enviar() {
     const chatAlreadyOpen = chats.filter(key => key.publicKey === chatOpen )
     console.log(chatAlreadyOpen)
 
-    
-
     let msg = document.getElementById('mensagem').value;
     let chat = document.getElementById(`Content${chatOpen}`);
 
@@ -84,6 +82,8 @@ function enviar() {
     // Adiciona a nova "div" e o novo "p" ao HTML.
     div.appendChild(p);
     chat.appendChild(div);
+
+    document.getElementById(`Content${chatOpen}`).scrollIntoView(false)
 
     document.getElementById('mensagem').value = "";
 }
